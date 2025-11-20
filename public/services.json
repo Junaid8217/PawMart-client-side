@@ -1,0 +1,122 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.postimg.cc/example1.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    "image": "https://i.postimg.cc/example2.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Snow Boots Fitting for Dogs",
+    "providerName": "WinterPaws Boutique",
+    "providerEmail": "support@winterpaws.com",
+    "price": 18,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Ensure a perfect fit for snow boots to protect your dog's paws outdoors.",
+    "image": "https://i.postimg.cc/example3.png",
+    "category": "Accessories"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Holiday Spa & Relaxation",
+    "providerName": "Paws & Relax Spa",
+    "providerEmail": "relax@pawsrelax.com",
+    "price": 45,
+    "rating": 4.9,
+    "slotsAvailable": 2,
+    "description": "A calming bath and fur-conditioning treatment for the winter season.",
+    "image": "https://i.postimg.cc/example4.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Festive Photo Session",
+    "providerName": "PawFrame Studio",
+    "providerEmail": "photos@pawframe.com",
+    "price": 50,
+    "rating": 5.0,
+    "slotsAvailable": 5,
+    "description": "Capture winter-themed digital photos of your furry family member.",
+    "image": "https://i.postimg.cc/example5.png",
+    "category": "Photography"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Warm Sweater Custom Stitch",
+    "providerName": "PetWear Crafts",
+    "providerEmail": "crafts@petwear.com",
+    "price": 28,
+    "rating": 4.6,
+    "slotsAvailable": 4,
+    "description": "Handmade sweaters customized to your dog’s size and winter style.",
+    "image": "https://i.postimg.cc/example6.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 7,
+    "serviceName": "Winter Training Session",
+    "providerName": "SmartPaws Academy",
+    "providerEmail": "train@smartpaws.com",
+    "price": 35,
+    "rating": 4.7,
+    "slotsAvailable": 3,
+    "description": "Special outdoor behavior training including recall and snow navigation.",
+    "image": "https://i.postimg.cc/example7.png",
+    "category": "Training"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Holiday Treat Baking Workshop",
+    "providerName": "TastyPet Bakery",
+    "providerEmail": "treats@tastypet.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 7,
+    "description": "Bake safe and delicious holiday treats for your dog with our chef.",
+    "image": "https://i.postimg.cc/example8.png",
+    "category": "Food"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Winter Check-up & Vaccination",
+    "providerName": "HealthyPaws Clinic",
+    "providerEmail": "contact@healthypaws.com",
+    "price": 60,
+    "rating": 4.9,
+    "slotsAvailable": 5,
+    "description": "General health check to ensure your pet stays fit during winter.",
+    "image": "https://i.postimg.cc/example9.png",
+    "category": "Healthcare"
+  },
+  {
+    "serviceId": 10,
+    "serviceName": "Adventure Snow Walk",
+    "providerName": "SnowPaws Walkers",
+    "providerEmail": "walk@snowpaws.com",
+    "price": 40,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Guided snow walks with trained handlers to keep your dog active.",
+    "image": "https://i.postimg.cc/example10.png",
+    "category": "Outdoor Activity"
+  }
+]
