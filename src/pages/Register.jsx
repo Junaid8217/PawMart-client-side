@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
+import auth from '../firebase/firebase.config';
 
 const Register = () => {
 
-    const {registerWithEmailPAssword} = useContext(AuthContext)
+    const { registerWithEmailPAssword, setUser, user } = useContext(AuthContext)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,14 +16,23 @@ const Register = () => {
         const photoUrl = e.target.photoURL.value;
 
         registerWithEmailPAssword(email, password)
-        .then(userCredential => {
-            const user = userCredential.user
-            console.log(user)
-        })
-        .catch(err => {
-            console.log(err)
-        })
+            .then((userCredential) => {
+
+                updateProfile(auth.currentUser, {
+                    displayName: name, photoURL: photoUrl
+                }).then(() => {
+                    // console.log(userCredential.user);
+                    setUser(userCredential.user)
+                }).catch((error) => {
+                    console.log(error)
+                });
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
+
+    console.log(user)
 
     return (
         <div className="hero bg-base-200 min-h-screen">
