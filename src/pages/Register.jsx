@@ -32,6 +32,9 @@ const Register = () => {
             })
     }
 
+    
+
+
     console.log(user)
 
     return (
