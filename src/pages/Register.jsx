@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
+import { toast } from 'react-toastify';
 
 const Register = () => {
 
@@ -41,6 +42,7 @@ const Register = () => {
                 }).catch((error) => {
                     console.log(error)
                 });
+                toast("Registration Successful")
             })
             .catch(err => {
                 console.log(err)
@@ -52,7 +54,7 @@ const Register = () => {
             .then(result => {
                 const user = result.user
                 setUser(user)
-
+                toast("Registration Successful")
             })
             .catch(err => {
                 console.log(err)

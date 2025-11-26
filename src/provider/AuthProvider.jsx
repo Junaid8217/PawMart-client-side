@@ -1,6 +1,8 @@
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import auth from '../firebase/firebase.config';
+  import { ToastContainer, toast } from 'react-toastify';
+
 
 export const AuthContext = createContext()
 
@@ -37,12 +39,14 @@ const AuthProvider = ({ children }) => {
         setUser,
         user,
         handleGoogleSignIn,
-        loading
+        loading,
+        
     }
 
     return <AuthContext value={authData}>
         {children}
     </AuthContext>
 };
+<ToastContainer />
 
 export default AuthProvider;
