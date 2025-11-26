@@ -36,7 +36,8 @@ const AuthProvider = ({ children }) => {
         registerWithEmailPAssword,
         setUser,
         user,
-        handleGoogleSignIn
+        handleGoogleSignIn,
+        loading
     }
 
     return <AuthContext value={authData}>

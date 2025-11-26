@@ -22,9 +22,9 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Home</a></li>
-                        <li><a>Services</a></li>
-                        <li><a>My Profile</a></li>
+                        <li><Link>Home</Link></li>
+                        <li><Link to='/services'>Services</Link></li>
+                        <li><Link to={'/profile'}>My Profile</Link></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">WarmPaws</a>
@@ -33,7 +33,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><Link>Home</Link></li>
                     <li><Link to='/services'>Services</Link></li>
-                    <li><Link>My Profile</Link></li>
+                    <li><Link to={'/profile'}>My Profile</Link></li>
                 </ul>
             </div>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
             }
             {
                 !user && <div className="navbar-end">
-                <btn  className="btn">Log In</btn>
+                <Link to='/login' className="btn">Log In</Link >
             </div>
             }
 

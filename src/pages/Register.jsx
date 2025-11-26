@@ -15,6 +15,21 @@ const Register = () => {
         const password = e.target.pass.value;
         const photoUrl = e.target.photoURL.value;
 
+        const upperCase = /[A-Z]/;
+        const lowerCase = /[a-z]/;
+
+        if (password.length < 6) {
+            return alert("less then 6 characters")
+        }
+        if (!upperCase.test(password)) {
+            return alert("Need a upper case")
+        }
+        if (!lowerCase.test(password)) {
+            return alert("Need a lower case")
+        }
+
+
+
         registerWithEmailPAssword(email, password)
             .then((userCredential) => {
 
@@ -45,6 +60,8 @@ const Register = () => {
 
     }
 
+    console.log(user)
+
 
 
 
@@ -67,7 +84,7 @@ const Register = () => {
                             <input name='photoURL' type="text" className="input" placeholder="PhotoURL" />
                             <label className="label">Password</label>
                             <input name='pass' type="password" className="input" placeholder="Password" />
-                            <div><a className="link link-hover">Forgot password?</a></div>
+                            
                             <div>
                                 <span>Already have an account? <Link to={'/login'} className='text-blue-700 underline'>Login</Link></span>
                             </div>
