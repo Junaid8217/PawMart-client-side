@@ -36,7 +36,7 @@ const AddService = () => {
 
 
         //sending data to backend
-        axios.post('http://localhost:3000/services', formData)
+        axios.post('https://backend-10-eight.vercel.app/services', formData)
             .then(res => {
                 console.log(res)
                 if (res.data.acknowledged) {
@@ -69,9 +69,6 @@ const AddService = () => {
 
 
     }
-
-
-
 
 
     return (

@@ -18,7 +18,7 @@ const ServiceDetails = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:3000/services/${id}`)
+        fetch(`https://backend-10-eight.vercel.app/services/${id}`)
             .then(res => res.json())
             .then(data => setService(data))
             .catch(error => console.log(error))
@@ -55,7 +55,7 @@ const ServiceDetails = () => {
         console.log(formData);
 
 
-        axios.post('http://localhost:3000/orders', formData)
+        axios.post('https://backend-10-eight.vercel.app/orders', formData)
             .then(res => {
                 console.log(res);
 

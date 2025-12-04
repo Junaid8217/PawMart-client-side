@@ -13,7 +13,7 @@ const MyServices = () => {
 
     useEffect(() => {
         //for getting query from backend 
-        fetch(`http://localhost:3000/my-services?email=${user?.email}`)
+        fetch(`https://backend-10-eight.vercel.app/my-services?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyServices(data))
             .catch(error => console.log(error))
@@ -35,7 +35,7 @@ const MyServices = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                axios.delete(`http://localhost:3000/delete/${id}`)
+                axios.delete(`https://backend-10-eight.vercel.app/delete/${id}`)
                     .then(res => {
                         console.log(res.data);
                         if (res.data.deletedCount == 1) {
@@ -43,7 +43,7 @@ const MyServices = () => {
                             const filterData = myServices.filter(service => service._id != id)
 
                             setMyServices(filterData)
-                            
+
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your file has been deleted.",

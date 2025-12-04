@@ -1,12 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { AuthContext } from '../provider/AuthProvider';
 
 const MyOrders = () => {
 
     const [myOrders, setMyOrders] = useState([])
+    
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/orders`)
+        axios.get(`https://backend-10-eight.vercel.app/orders`)
             .then(res => {
                 setMyOrders(res.data)
             })
@@ -22,6 +24,8 @@ const MyOrders = () => {
 
     return (
         <div className='p-5 '>
+
+
             <div className="overflow-x-auto">
                 <table className="table table-xs">
                     <thead>
