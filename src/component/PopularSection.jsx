@@ -7,7 +7,7 @@ const PopularSection = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('./services.json')
+        fetch('http://localhost:3000/services')
             .then(res => res.json())
             .then(data => setServices(data))
             .catch(error => console.log(error))
@@ -40,13 +40,13 @@ const PopularSection = () => {
                                 alt="Shoes" />
                         </figure>
                         <div className="card-body">
-                            <h2 className="card-title">{service?.serviceName}</h2>
+                            <h2 className="card-title">{service?.productName}</h2>
                             <div className='flex justify-between'>
                                 <p>Price: {service?.price}</p>
-                                <p>Rating: {service?.rating}</p>
+                                <p>Category: {service?.category}</p>
                             </div>
                             <div className="card-actions justify-end">
-                                <Link to={`/details/${service?.serviceId}`}><button className="btn btn-primary">View Details</button></Link>
+                                <Link to={`/details/${service?._id}`}><button className="btn btn-primary">View Details</button></Link>
                             </div>
                         </div>
                     </div>

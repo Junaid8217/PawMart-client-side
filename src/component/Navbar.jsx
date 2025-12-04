@@ -6,7 +6,7 @@ import auth from '../firebase/firebase.config';
 
 const Navbar = () => {
 
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const handleSignOut = () => {
         signOut(auth)
@@ -24,7 +24,16 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li><Link>Home</Link></li>
                         <li><Link to='/services'>Services</Link></li>
-                        <li><Link to={'/profile'}>My Profile</Link></li>
+                        {
+                        user && (
+                            <>
+                                <li><Link to={'/profile'}>My Profile</Link></li>
+                                <li><Link to={'/add-service'}>Add Service</Link></li>
+                                <li><Link to={'/my-services'}>My Services</Link></li>
+                                <li><Link to={'/my-orders'}>My Orders</Link></li>
+                            </>
+                        )
+                    }
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">WarmPaws</a>
@@ -33,22 +42,31 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><Link>Home</Link></li>
                     <li><Link to='/services'>Services</Link></li>
-                    <li><Link to={'/profile'}>My Profile</Link></li>
+                    {
+                        user && (
+                            <>
+                                <li><Link to={'/profile'}>My Profile</Link></li>
+                                <li><Link to={'/add-service'}>Add Service</Link></li>
+                                <li><Link to={'/my-services'}>My Services</Link></li>
+                                <li><Link to={'/my-orders'}>My Orders</Link></li>
+                            </>
+                        )
+                    }
                 </ul>
             </div>
 
             {
                 user && <div className="navbar-end">
-                <btn onClick={handleSignOut}  className="btn">Log Out</btn>
-            </div>
+                    <btn onClick={handleSignOut} className="btn">Log Out</btn>
+                </div>
             }
             {
                 !user && <div className="navbar-end">
-                <Link to='/login' className="btn">Log In</Link >
-            </div>
+                    <Link to='/login' className="btn">Log In</Link >
+                </div>
             }
 
-            
+
         </div>
     );
 };
