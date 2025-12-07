@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const ServiceDetails = () => {
 
@@ -58,6 +59,18 @@ const ServiceDetails = () => {
         axios.post('https://backend-10-eight.vercel.app/orders', formData)
             .then(res => {
                 console.log(res);
+                if (res.data.acknowledged) {
+
+                    const modal = document.getElementById('my_modal_3');
+                    modal.close();
+
+                    Swal.fire({
+                        title: "Your order is placed",
+                        icon: "success",
+                        draggable: true
+                    })
+                    form.reset();
+                }
 
             })
             .catch(err => {

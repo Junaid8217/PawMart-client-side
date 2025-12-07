@@ -1,14 +1,15 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 
 const MyOrders = () => {
 
     const [myOrders, setMyOrders] = useState([])
+    const {user} = useContext(AuthContext)
     
 
     useEffect(() => {
-        axios.get(`https://backend-10-eight.vercel.app/orders`)
+        axios.get(`https://backend-10-eight.vercel.app/orders?email=${user?.email}`)                     
             .then(res => {
                 setMyOrders(res.data)
             })
@@ -16,7 +17,7 @@ const MyOrders = () => {
                 console.log(err);
 
             })
-    }, [])
+    }, [user?.email])
 
     console.log(myOrders);
 
@@ -72,3 +73,5 @@ const MyOrders = () => {
 };
 
 export default MyOrders;
+
+
